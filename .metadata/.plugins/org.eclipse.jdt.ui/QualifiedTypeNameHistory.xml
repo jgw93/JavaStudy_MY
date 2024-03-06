@@ -21,7 +21,12 @@
     <fullyQualifiedTypeName name="ex_240304.Rectangle"/>
     <fullyQualifiedTypeName name="java.security.PublicKey"/>
     <fullyQualifiedTypeName name="ex_240304.Circle"/>
-    <fullyQualifiedTypeName name="ex_240304.Idol"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="ex_240306.A"/>
+    <fullyQualifiedTypeName name="ex_240306.A2"/>
+    <fullyQualifiedTypeName name="ex_240306.B"/>
+    <fullyQualifiedTypeName name="ex_240306.C"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="ex_240306.Idol_abstract"/>
+    <fullyQualifiedTypeName name="ex_240304.Idol"/>
 </qualifiedTypeNameHistroy>
