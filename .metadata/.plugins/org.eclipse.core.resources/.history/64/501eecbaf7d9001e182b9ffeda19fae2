@@ -1,0 +1,24 @@
+package ex_240304;
+
+import java.security.PublicKey;
+
+public class Ex_06_Class_1_callByValue {
+
+	public static void main(String[] args) {
+		// 메서드 안에서의 변수는 지역변수라서, 효력범위를, 수행후 소명 부분 재확인.
+		int n =10;
+		
+		Circle circle = new Circle(n);
+		
+		circle.increase(n);
+		
+		System.out.println("변수 n 의 변화가 없는 부분 확인 하기 : " + n); //10 출력.
+
+	}
+	
+	public static void increase2(Circle c100) {
+		c100.setRadius(200);
+		
+	}
+
+}

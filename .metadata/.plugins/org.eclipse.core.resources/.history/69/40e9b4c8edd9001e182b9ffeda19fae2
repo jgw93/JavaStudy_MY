@@ -1,0 +1,32 @@
+package ex_240304;
+
+public class Ex_04_Class_1_Circle {
+
+	public static void main(String[] args) {
+		// 클래스 사용.
+		// 클래스명 레퍼런스 변수 = new 클래스명();
+		// 클래스명() : 기본생성자
+		// 생성자를 호출한다.
+		
+		Circle koreanPizza = new Circle();
+		// 클래스 필드의 접근 지정자가, public이면 보여서 접근이 가능함.
+		// 접근 지정자가 private면 getter/setter로 접근이 가능한 매개체를 만들기.
+		// 클래스에서 만들기.
+		koreanPizza.setName("부추전");
+		koreanPizza.setRadius(15);
+		// 메서드를 이용해서, 정보를 접근.
+		koreanPizza.showInfo();
+		
+		// getter를 이용해서 해당 정보 접근.
+		System.out.println("getter 이용해서, 멤버 접근 하기. name: " + koreanPizza.getName());
+		System.out.println("getter 이용해서, 멤버 접근 하기. radius: " + koreanPizza.getRadius());
+		
+		// 김치천
+		Circle kimchiPizza = new Circle(20, "김치천");
+		kimchiPizza.calcGetArea();
+		kimchiPizza.showInfo();
+		
+
+	}
+
+}

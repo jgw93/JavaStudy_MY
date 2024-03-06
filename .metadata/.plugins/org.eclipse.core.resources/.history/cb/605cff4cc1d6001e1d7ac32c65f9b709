@@ -1,0 +1,12 @@
+package ex_240229;
+
+public class Ex_7_Array2 {
+
+	public static void main(String[] args) {
+		int intArray [] = new ins[5];
+		for(intArray i=0; i< intArray.length; i++) {
+			intArray[i]= (int)(Math.random()*100); 
+		}
+	}
+
+}

@@ -1,0 +1,19 @@
+package ex_240229;
+
+import java.security.PublicKey;
+import java.util.function.BiConsumer;
+
+public class Ex_1_if_else_if_swich {
+
+	public static void main(String[] args) {
+		
+		// 성적을 입력해서, 총점, 평균을 구하는 간단한 함수
+		// HTML, CSSM, JS, JAVA 4과목에 대한 점수를 입력 받아서, 반환하기.
+		public String toAvgTotalScore(int html, int css, int js, int java) {
+			sum = html + css + js + java
+			return "결과 점수 , 총점 :  점 "resultTotalScore+ + " 평균 : "+ resultAvgScore + " 점 "
+		}
+
+	}
+
+}

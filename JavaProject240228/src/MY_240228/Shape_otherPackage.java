@@ -1,0 +1,14 @@
+package MY_240228;
+
+public class Shape_otherPackage {
+	private String name;
+	// 접근 지정자 생략하면, dafault
+	// 같은 패키지 내부에서 접근이 가능함.
+	String color;
+	// 상속 받은 자식 클래스에서만 접근이 가능함.
+	protected int edgePoint;
+	public int edgePoint2;
+	
+	
+
+}

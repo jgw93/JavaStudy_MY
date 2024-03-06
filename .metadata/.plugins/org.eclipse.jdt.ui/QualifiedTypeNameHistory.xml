@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.w3c.dom.UserDataHandler"/>
+    <fullyQualifiedTypeName name="ex_240228.Ex_2_Variable.person"/>
+    <fullyQualifiedTypeName name="ex_240228.Ex_2_Variable.Person"/>
+    <fullyQualifiedTypeName name="javax.imageio.ImageTranscoder"/>
+    <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthScrollPaneUI"/>
+    <fullyQualifiedTypeName name="java.util.function.BiConsumer"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="int"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="ex_240304.Animal"/>
+    <fullyQualifiedTypeName name="ex_240304.Ex_03_Class_2_Idol"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="ex_240304.Idol"/>
+    <fullyQualifiedTypeName name="ex_240304.BlackPink"/>
+    <fullyQualifiedTypeName name="java.awt.geom.PathIterator"/>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="ex_240304.Shape"/>
+    <fullyQualifiedTypeName name="ex_240304.Triangle"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="ex_240304.Rectangle"/>
+    <fullyQualifiedTypeName name="java.security.PublicKey"/>
+    <fullyQualifiedTypeName name="ex_240304.Circle"/>
+</qualifiedTypeNameHistroy>
