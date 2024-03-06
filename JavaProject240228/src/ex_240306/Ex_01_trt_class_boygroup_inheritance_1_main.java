@@ -1,5 +1,7 @@
 package ex_240306;
 
+import ex_240304.Idol;
+
 public class Ex_01_trt_class_boygroup_inheritance_1_main {
 
 	public static void main(String[] args) {
@@ -27,6 +29,24 @@ public class Ex_01_trt_class_boygroup_inheritance_1_main {
 				
 	    boygroup1.introduceMember();
 		boygroup1.introduceAlbum();
+		
+		// 부모클래스 명 참조형 변수 = new 자식 클래스명();
+		// 참조형 변수. 닷 연산자를 통해서, 접근이 가능한 메서드는? 1)부모것만 2)자식것만(도 포함)
+//		Idol test = new Ex_01_trt_class_boygroup_inheritance_1();
+//		test. 부모것만 보임.
+		
+		// 해당 인스턴스에 부모 메서드만 보인다면,
+		// 자식의 메서드도 보고싶다. 방법은?
+		// 1) 업캐스팅. 2) 다운 캐스팅.
+		// 정답. 다운캐스팅
+		// 방법
+		// 자식 클래스명 레퍼런스 명 = 캐스팅 연산자(자식 클래스명) 부모 클래스의 인스턴스
+		// 작은 집 -> 큰집 : 업캐스팅
+//		Idol test = new Ex_01_trt_class_boygroup_inheritance_1();
+		
+		// 큰집 -> 작은집: 다운캐스팅
+//		Ex_01_trt_class_boygroup_inheritance_1 test2=
+//				(Ex_01_trt_class_boygroup_inheritance_1) test;
 		
 		// 접근 지정자;
 		// 1) public : 모든 곳에서 접근이 가능(다 보인다.)

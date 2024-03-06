@@ -13,14 +13,15 @@
     <fullyQualifiedTypeName name="ex_240304.Ex_03_Class_2_Idol"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="ex_240304.Idol"/>
     <fullyQualifiedTypeName name="ex_240304.BlackPink"/>
     <fullyQualifiedTypeName name="java.awt.geom.PathIterator"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="ex_240304.Shape"/>
     <fullyQualifiedTypeName name="ex_240304.Triangle"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="ex_240304.Rectangle"/>
     <fullyQualifiedTypeName name="java.security.PublicKey"/>
     <fullyQualifiedTypeName name="ex_240304.Circle"/>
+    <fullyQualifiedTypeName name="ex_240304.Idol"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="ex_240306.A"/>
 </qualifiedTypeNameHistroy>
