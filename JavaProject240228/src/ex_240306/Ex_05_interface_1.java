@@ -20,8 +20,12 @@ public interface Ex_05_interface_1 {
 	
 	// 구성품
 	// 1) 상수 2) 추상메서드 3) 디폴트 기본 메서드(일반 메서드) 4) private 메서드 5) static 메서드
-	public final int MAX = 100;
-	abstract public void showInfo();
+	int MAX = 100;
+	//public static final int MAX = 100;
+	//public static final , 생략가능
+	//abstract public 생략 가능
+	//abstract public void showInfo();
+	void showInfo();
 	public default void introduceInfo() {
 		System.out.println("디폴트 메서드 입니다.");
 		introducehobby();
