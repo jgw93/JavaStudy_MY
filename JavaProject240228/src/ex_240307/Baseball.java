@@ -1,8 +1,8 @@
 package ex_240307;
 
-public class Swimming extends Sports implements Interface1 {
+public class Baseball extends Sports implements Interface1 {
 
-	public Swimming(String sportsName, int sportsMemberCount, String sportsPlayTime, String sportsPlace) {
+	public Baseball(String sportsName, int sportsMemberCount, String sportsPlayTime, String sportsPlace) {
 		super(sportsName, sportsMemberCount, sportsPlayTime, sportsPlace);
 
 	}
@@ -24,7 +24,6 @@ public class Swimming extends Sports implements Interface1 {
 			System.out.print(item + ", ");
 		}
 		System.out.println();
-
 	}
 
 	@Override
@@ -32,14 +31,7 @@ public class Swimming extends Sports implements Interface1 {
 		System.out.println("팀명 및 팀원소개: ");
 		for (String teamOrMember : TeamOrMember) {
 			System.out.print(teamOrMember + ", ");
-			
 		}
 		System.out.println();
-		
-
-		// 자식 클래스이고,
-		// 부모 : Sports
-		// 인터페이스 : Interface1
-
 	}
 }
