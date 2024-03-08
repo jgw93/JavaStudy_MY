@@ -62,5 +62,6 @@ public class Person {
 		// 비지니스 로직, 데이터로 작업을 함
 
 	}
+	
 
 }

@@ -8,6 +8,14 @@
 		<item value="jgw1993 &lt;kmmh99@naver.com&gt;"/>
 		<item value="jgw93 &lt;kmmh99@naver.com&gt;"/>
 	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/jgw93/JavaStudy_MY.git"/>
+	</list>
+	<list key="EGit.KnownHosts">
+		<item value="bitbucket.org"/>
+		<item value="git.eclipse.org"/>
+		<item value="github.com"/>
+	</list>
 	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
 		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="false"/>
 		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="500,500"/>
@@ -15,6 +23,9 @@
 		<item key="sortItemState" value="false"/>
 	</section>
 	<section name="GitCommitMessageComponent">
+		<list key="C:\Java-workspace\.git">
+			<item value="empty"/>
+		</list>
 	</section>
 	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="635"/>

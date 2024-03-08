@@ -27,29 +27,48 @@ public class Main2_Console_Mode {
 				scanner.close();
 				break;
 
+//			} else if (checkNum == 1) {
+//				// 스포츠 등록하는 메서드
+//				System.out.println("스포츠 등록하기.");
+//				System.out.println("등록할 스포츠 갯수를 입력해주세요(1~5)>>");
+//				int sportsNumber = scanner.nextInt();
+//				sportsArray = new Sports[sportsNumber];
+//
+//				InputFuncs inputSports = new InputFuncs();
+//				SubSports sports = null;
+//				Sports SubinputedSports = inputSports.enrollSports(sports);
+//				for(int i=0; i<sportsArray.length; i++) {
+//					sportsArray[i] = SubinputedSports;
+//				}
+//				// 등록 후 ,저장되는 공간이 현재는 메모리이다 보니, 남지않음.
+//				
+//				SubSports subSports = (SubSports)SubinputedSports;
+//				subSports.showAllInfo();
+				
 			} else if (checkNum == 1) {
-				// 스포츠 등록하는 메서드
-				System.out.println("스포츠 등록하기.");
-				System.out.println("등록할 스포츠 갯수를 입력해주세요(1~5)>>");
-				int sportsNumber = scanner.nextInt();
-				sportsArray = new Sports[sportsNumber];
+			    // 스포츠 등록하는 메서드
+			    System.out.println("스포츠 등록하기.");
+			    System.out.println("등록할 스포츠 갯수를 입력해주세요(1~5)>>");
+			    int sportsNumber = scanner.nextInt();
+			    sportsArray = new Sports[sportsNumber];
 
-				InputFuncs inputSports = new InputFuncs();
-				SubSports sports = null;
-				Sports SubinputedSports = inputSports.enrollSports(sports);
-				for(int i=0; i<sportsArray.length; i++) {
-					sportsArray[i] = SubinputedSports;
-				}
-				// 등록 후 ,저장되는 공간이 현재는 메모리이다 보니, 남지않음.
-				
-				SubSports subSports = (SubSports)SubinputedSports;
-				subSports.showAllInfo();
-				
+			    InputFuncs inputSports = new InputFuncs();
+			    for (int i = 0; i < sportsNumber; i++) {
+			        SubSports sports = null;
+			        Sports SubinputedSports = inputSports.enrollSports(sports);
+			        sportsArray[i] = SubinputedSports;
+			        
+			        // 등록 후, 저장된 스포츠 정보 출력
+			        SubSports subSports = (SubSports) SubinputedSports;
+			        subSports.showAllInfo();
+			    }
+			
 				
 
 			} else if (checkNum == 2) {
 				// 스포츠 검색하는 메서드
 				System.out.println("스포츠 검색하기.");
+				System.out.println("찾을 스포츠를 입력해주세요.");
 
 			} else {
 				System.out.println("===========1~3번 숫자를 입력해주세요.============");

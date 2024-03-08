@@ -35,8 +35,9 @@ public class InputFuncs {
 		int sportsStartSeason = scanner.nextInt();
 		String sportsStartSeasonpick = Util.pickSeason(sportsStartSeason);
 		
-		System.out.println("실내 또는 실외 입력해주세요.>> ");
-		String sportsInOrOut = scanner.next();
+		System.out.println("실내:1 또는 실외:2 입력해주세요.>> ");
+		int inOrOutChoice = scanner.nextInt();
+		String sportsInOrOut = (inOrOutChoice == 1) ? "실내" : "실외";
 		
 		System.out.println("대표 멤버를 3명만 입력해주세요.(공백을 기준으로 나란히 작성해주세요.)>> ");
 		String [] members = new String[3];

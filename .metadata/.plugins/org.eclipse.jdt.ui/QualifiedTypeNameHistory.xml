@@ -11,8 +11,6 @@
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
     <fullyQualifiedTypeName name="ex_240304.Animal"/>
     <fullyQualifiedTypeName name="ex_240304.Ex_03_Class_2_Idol"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="ex_240304.BlackPink"/>
     <fullyQualifiedTypeName name="java.awt.geom.PathIterator"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
@@ -21,7 +19,6 @@
     <fullyQualifiedTypeName name="ex_240304.Rectangle"/>
     <fullyQualifiedTypeName name="java.security.PublicKey"/>
     <fullyQualifiedTypeName name="ex_240304.Circle"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="ex_240306.A"/>
     <fullyQualifiedTypeName name="ex_240306.A2"/>
     <fullyQualifiedTypeName name="ex_240306.B"/>
@@ -30,4 +27,19 @@
     <fullyQualifiedTypeName name="ex_240304.Idol"/>
     <fullyQualifiedTypeName name="ex_240306.Idol_abstract"/>
     <fullyQualifiedTypeName name="ex_240306.Ex_05_interface_subClass_1"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="ex_240307.Swimming"/>
+    <fullyQualifiedTypeName name="ex_240307.Baseball"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="ex_240307.Interface1"/>
+    <fullyQualifiedTypeName name="ex_240307.Util"/>
+    <fullyQualifiedTypeName name="ex_240307.InputFuncs"/>
+    <fullyQualifiedTypeName name="ex_240307.Sports"/>
+    <fullyQualifiedTypeName name="ex_240307.SubSports"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.lang.Boolean"/>
+    <fullyQualifiedTypeName name="ex_240307_2.Person"/>
+    <fullyQualifiedTypeName name="ex_240307.Season"/>
 </qualifiedTypeNameHistroy>

@@ -13,20 +13,35 @@ public class Util {
 	}
 	
 	// 입력 숫자에 따른 계절 이름 출력하는 메서드
-	public static String pickSeason(int number) {
-		if (number ==1) {
-			return "봄";
-		}else if (number ==2) {
-			return "여름";
-		}else if (number ==3) {
-			return "가을";
-		}else if (number ==4) {
-			return "겨울";
-		}else {
-			System.out.println("다시 입력해주세요.");
-			return "사계절";
-		}
-		
+//	public static String pickSeason(int number) {
+//		if (number ==1) {
+//			return "봄";
+//		}else if (number ==2) {
+//			return "여름";
+//		}else if (number ==3) {
+//			return "가을";
+//		}else if (number ==4) {
+//			return "겨울";
+//		}else {
+//			System.out.println("다시 입력해주세요.");
+//			return "사계절";
+//		}
+//		
+//	}
+	public static String pickSeason(int season) {
+	    switch (season) {
+	        case 1:
+	            return "봄";
+	        case 2:
+	            return "여름";
+	        case 3:
+	            return "가을";
+	        case 4:
+	            return "겨울";
+	        default:
+	            // 유효하지 않은 계절 입력인 경우 기본값으로 설정
+	            return "봄";
+	    }
 	}
 	
 	// 현재 날짜 등록 해주는 기능.
