@@ -30,37 +30,37 @@ public class Ex_08_Collection_HashMap_1 {
 		// 순서1.
 		Iterator<String> it = keys.iterator();
 		// 순서2.
-		while(it.hasNext()) {
+		while (it.hasNext()) {
 			// 모든 키를 조회를 했고,
 			String keyString = it.next();
 			// 해당 키를 이용해서 값을 조회하기.
 			String value = hashMap.get(keyString);
 			System.out.println("key: " + keyString + ", value: " + value);
-			
+
 		}
-    // 제거, 바나나
-	// 문법, remove(key) : 해당 키에 대응하는 값을 삭제한다.
-	hashMap.remove("banana");
-	
-	// 삭제후 출력.
-	Set<String> keys2 = hashMap.keySet();
-	// 반복가능하게 만들어서, 순차 조회를 하기.
-	// 순서1.
-	Iterator<String> it2 = keys.iterator();
-	// 순서2.
-	while(it.hasNext()) {
-		// 모든 키를 조회를 했고,
-		String keyString = it2.next();
-		// 해당 키를 이용해서 값을 조회하기.
-		String value = hashMap.get(keyString);
-		System.out.println("key: " + keyString + ", value: " + value);
-	}
-	
-	//키로 검색
-	System.out.println("key에 대한 apple 존재 유무 : " + hashMap.containsKey("apple"));
-	
-	// 값으로 검색
-	System.out.println("key에 대한 apple 존재 유무 : " + hashMap.containsValue("사과"));
-	
+		// 제거, 바나나
+		// 문법, remove(key) : 해당 키에 대응하는 값을 삭제한다.
+		hashMap.remove("banana");
+
+		// 삭제후 출력.
+		Set<String> keys2 = hashMap.keySet();
+		// 반복가능하게 만들어서, 순차 조회를 하기.
+		// 순서1.
+		Iterator<String> it2 = keys.iterator();
+		// 순서2.
+		while (it.hasNext()) {
+			// 모든 키를 조회를 했고,
+			String keyString = it2.next();
+			// 해당 키를 이용해서 값을 조회하기.
+			String value = hashMap.get(keyString);
+			System.out.println("key: " + keyString + ", value: " + value);
+		}
+
+		// 키로 검색
+		System.out.println("key에 대한 apple 존재 유무 : " + hashMap.containsKey("apple"));
+
+		// 값으로 검색
+		System.out.println("key에 대한 apple 존재 유무 : " + hashMap.containsValue("사과"));
+
 	}
 }
