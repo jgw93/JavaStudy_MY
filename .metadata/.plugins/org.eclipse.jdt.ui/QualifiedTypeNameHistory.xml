@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="ex_240307.Baseball"/>
-    <fullyQualifiedTypeName name="ex_240307.Interface1"/>
-    <fullyQualifiedTypeName name="ex_240307.Util"/>
-    <fullyQualifiedTypeName name="ex_240307.InputFuncs"/>
-    <fullyQualifiedTypeName name="ex_240307.Sports"/>
-    <fullyQualifiedTypeName name="ex_240307.SubSports"/>
-    <fullyQualifiedTypeName name="java.lang.Boolean"/>
-    <fullyQualifiedTypeName name="ex_240307_2.Person"/>
-    <fullyQualifiedTypeName name="ex_240307.Season"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="java.lang.Float"/>
     <fullyQualifiedTypeName name="javax.security.auth.x500.X500Principal"/>
@@ -29,7 +20,6 @@
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="TEST_240311.Point"/>
     <fullyQualifiedTypeName name="TEST_240311.Interface"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="ex_240313.TimerThread"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
@@ -60,4 +50,14 @@
     <fullyQualifiedTypeName name="ex_240313.ConsumerThread"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="javax.swing.JLabel"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="javax.print.DocFlavor.INPUT_STREAM"/>
+    <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="ex_240314.Ex_05_FileIo_File_Method"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="byte"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 </qualifiedTypeNameHistroy>
