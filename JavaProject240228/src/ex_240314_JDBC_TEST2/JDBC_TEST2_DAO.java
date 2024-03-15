@@ -134,8 +134,8 @@ public class JDBC_TEST2_DAO {
 		
 			pstmt.setString(1, id);
 			pstmt.setString(2, name);
-			pstmt.setString(3, content);
-			pstmt.setString(4, date_created);
+//			pstmt.setString(3, content);
+//			pstmt.setString(4, date_created);
 
 		
 			int resultNum = pstmt.executeUpdate();
