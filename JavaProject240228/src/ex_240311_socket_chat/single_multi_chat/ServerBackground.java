@@ -13,12 +13,18 @@ import java.util.Map;
 import javax.sound.midi.Receiver;
  
 public class ServerBackground {
+	// 클라이언트, 서버 연결 부분
+	// 연결 후 메세지 전달 부분.
+	// 스레드 부분, 멀티 채팅을 할 때, 스레드 이용해서
  
     private ServerSocket serverSocket; // 서버 소켓
     private Socket socket; // 받아올 소켓 저장
     private ServerGUI gui;
     private String msg;
     /** XXX 03. 사용자들의 정보를 저장하는 맵 */ 
+    // 키 : 닉네임, 채팅방 입장시 사용했던 이름: 예) 장규원
+    // 값 : DataOutputStream, 소켓을 이용해서, 상대방이 입력받은 내용을 출력 해주는 기능.
+    // clientMap : 모든 사용자의 이름과, 해당 이름에 대한 출력을 하는 기능인 인스턴스가 들어가 있음.
     private Map<String, DataOutputStream> clientMap = new HashMap<String, DataOutputStream>();
  
     public void setGui(ServerGUI gui) {
@@ -33,17 +39,22 @@ public class ServerBackground {
     public void setting() {
         
         try {
+        	// 스레드인데, 작업 스케줄, 순서 맞게 , 동시 실행이 가능하게 해주는 역할.
             Collections.synchronizedMap(clientMap); //교통정리를 해준다.( clientMap을 네트워크 처리해주는것 ) 
+            // 서버가 해당 포트로 소켓을 이용해서, 통신 준비.
             serverSocket = new ServerSocket(7777);
  
             while (true) {
                 /** XXX 01.서버가 할일 : 방문자를 계속 받아서, 쓰레드 리시버를 계속 생성 */
                 
                 System.out.println("대기중.....");
+                // 소켓이, 클라이언트가 요청을 하면 수락을 하는 기능, 수락을 하면, 서버<-->클라이언트, 연결고리: 소켓
                 socket = serverSocket.accept(); // 여기서 클라이언트 받음
+                // socket의 여러 기능중 하나이고, getInetAddress, 정보를 출력해줌.
                 System.out.println(socket.getInetAddress() + "에서 접속했습니다.");
                 
                 //여기서 새로운 사용자 스레드 클래스를 생성해서 소켓 정보를 넣어줘야한다.
+                // 스레드 클래스
                 Receiver receiver = new Receiver(socket);
                 receiver.start();
             }
@@ -84,6 +95,7 @@ public class ServerBackground {
         }
     }
     // ------------------리시버---------------------------
+    // 스레드 정의 1) Thread 상속 2) Runnable 인터페이스를 구현
     class Receiver extends Thread {
         /** XXX 리시버가 할일 : 네트워크 소켓을 받아서 계속듣고 보내는 일. */
         private DataInputStream in; // 데이터 입력 스트림

@@ -6,8 +6,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.Scanner;
- 
+import java.awt.Container;
+import java.awt.FlowLayout;
 import javax.swing.JFrame;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
  
@@ -19,11 +21,26 @@ public class ClientGUI extends JFrame implements ActionListener{
     private ClientBackground client = new ClientBackground();
     private static String nickName;
     
+
+    
     public ClientGUI(){
-        
-        add(jta, BorderLayout.CENTER);
-        add(jtf, BorderLayout.SOUTH);
-        jtf.addActionListener(this);
+
+    	Container container = getContentPane();
+    	
+		// 배치관리자를 선정.
+//		container.setLayout(new FlowLayout());
+//		container.add(jta);
+//		container.add(jtf);
+//		container.add(new JScrollPane(jta));
+		
+		// 보더 레이아웃
+		container.setLayout(new BorderLayout());
+		container.add(jta,BorderLayout.CENTER);
+		container.add(jtf,BorderLayout.SOUTH);
+		container.add(new JScrollPane(jta),BorderLayout.CENTER);
+		jtf.addActionListener(this);
+    	
+
         
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
