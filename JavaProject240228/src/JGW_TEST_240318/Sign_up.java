@@ -11,8 +11,8 @@ import java.sql.SQLException;
 
 public class Sign_up extends JFrame {
     // 데이터베이스 연결 정보
-    static final String JDBC_DRIVER = "oracle.jdbc.driver.OracleDriver";
-    static final String DB_URL = "jdbc:oracle:thin:@localhost:1521:xe"; // Oracle 데이터베이스 URL
+    static final String DRIVER = "oracle.jdbc.driver.OracleDriver";
+    static final String URL = "jdbc:oracle:thin:@localhost:1521:xe"; // Oracle 데이터베이스 URL
     static final String USER = "system"; // 데이터베이스 사용자 이름
     static final String PASS = "oracle"; // 데이터베이스 비밀번호
 
@@ -73,10 +73,10 @@ public class Sign_up extends JFrame {
         PreparedStatement pstmt = null;
         try {
             // JDBC 드라이버 로딩
-            Class.forName(JDBC_DRIVER);
+            Class.forName(DRIVER);
 
             // 데이터베이스 연결
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            conn = DriverManager.getConnection(URL, USER, PASS);
 
             // 사용자가 입력한 정보 가져오기
             String username = usernameField.getText();
