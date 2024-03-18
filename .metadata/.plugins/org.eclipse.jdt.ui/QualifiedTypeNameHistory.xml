@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="ex_240313.TimerThread2"/>
-    <fullyQualifiedTypeName name="ex_240313.Ex_02_Thread_class_with_UI_2"/>
     <fullyQualifiedTypeName name="javax.swing.JButton"/>
     <fullyQualifiedTypeName name="ex_240313.TimerThread3"/>
     <fullyQualifiedTypeName name="java.lang.Runnable"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="ex_240315.java_board.Boarder_Proc"/>
     <fullyQualifiedTypeName name="ex_240315.java_board.Boarder_DAO"/>
     <fullyQualifiedTypeName name="ex_240315.java_board.Boarder_DTO"/>
+    <fullyQualifiedTypeName name="view.IntroList"/>
+    <fullyQualifiedTypeName name="view.LoginPage"/>
 </qualifiedTypeNameHistroy>
