@@ -54,11 +54,13 @@ public class Boarder_DAO {
 // 반환 : 이중 리스트를 반환한다. 리스트안에, 각각의 게시글들이 있다. 
 	public Vector getBoarderList() {
 
+		// 임시 데이터를 담을 저장 공간(메모리에 담아둠)
 		Vector data = new Vector();
 		// Jtable에 값을 쉽게 넣는 방법 1. 2차원배열 2. Vector 에 vector추가
 
 		Connection con = null; // 연결
 		PreparedStatement ps = null; // 명령
+		// 조회시 만 사용할 예정
 		ResultSet rs = null; // 결과
 
 		try {
@@ -68,15 +70,19 @@ public class Boarder_DAO {
 			// 날짜가 큰값이 최신 날짜임.
 			String sql = "select * from BOARDER_JAVA order by regDate desc";
 			ps = con.prepareStatement(sql);
+			// 메서드가 실행이 되면, 데이터베이스 조회한 내용이 rs 인스턴스에 임시로 저장됨.
+			// 저장이 되는 포맷은 마치 엑셀 표와 비슷함.
 			rs = ps.executeQuery();
 
+			// rs 는 0행에서 대기하고 있다가, next 만나면, 다음행 1행으로 넘어가
+			// 각 컬럼별로 데이터를 가지고 오는 역할.
 			while (rs.next()) {
-				String id = rs.getString("id");
+				int id = rs.getInt("id");
 				String writer = rs.getString("writer");
 				String subject = rs.getString("subject");
 				String content = rs.getString("content");
 				String regDate = rs.getString("regDate");
-				String viewsCount = rs.getString("viewsCount");
+				int viewsCount = rs.getInt("viewsCount");
 
 				Vector row = new Vector();
 				row.add(id);
@@ -151,9 +157,12 @@ public class Boarder_DAO {
 		}
 	}
 
-	/** 회원 등록 */
+	/** 게시글 등록 */
+	// Boarder_DTO dto : 하나의 게시글의 모델,
+	// 각 글을 쓸 때, Boarder_DTO dto 하나씩 사용이됨.
 	public boolean insertBoarder(Boarder_DTO dto) {
 
+		// 상태 변수로 사용 중, 글쓰기 메서드가 완료가 되면, true 변경 할 예정.
 		boolean ok = false;
 
 		Connection con = null; // 연결
@@ -164,7 +173,7 @@ public class Boarder_DAO {
 			con = getConn();
 			String sql = "insert into BOARDER_JAVA(" + "id,writer,subject,content,regDate,viewsCount )"
 					+ "values(boarder_seq.NEXTVAL,?,?,?,?,?)";
-
+			// dto 에 각 게시글의 내용들이 담겨 있는 모델 박스라 생각하기.
 			ps = con.prepareStatement(sql);
 			ps.setString(1, dto.getWriter());
 			ps.setString(2, dto.getSubject());
@@ -187,5 +196,108 @@ public class Boarder_DAO {
 
 		return ok;
 	}// insertMmeber
+
+	// 하나의 게시글 정보 가져오는 기능
+	/** 한사람의 회원 정보를 얻는 메소드 */
+	public Boarder_DTO getBoarderDTO(int id) {
+
+		// 임시로 메모리에 담아둘 공간.
+		Boarder_DTO dto = new Boarder_DTO();
+
+		Connection con = null; // 연결
+		PreparedStatement ps = null; // 명령
+		ResultSet rs = null; // 결과
+
+		try {
+
+			con = getConn();
+			String sql = "select * from BOARDER_JAVA where id=?";
+			// sql 을 전달하는 기능
+			ps = con.prepareStatement(sql);
+			// ? 동적 매개변수에 값을 넣기
+			ps.setInt(1, id);
+			// 조회시 사용하는 메서드
+			rs = ps.executeQuery();
+			// 하나의 게시글을 받아와서, 각 컬럼을 반복문으로 순회하면서, 값을 가져오기.
+			// 가져온 데이터를 DTO 하는 게시글을 담는 박스에 담기.
+			if (rs.next()) {
+				dto.setId(rs.getInt("id"));
+				dto.setWriter(rs.getString("writer"));
+				dto.setSubject(rs.getString("subject"));
+				dto.setContent(rs.getString("content"));
+				dto.setRegDate(rs.getString("regdate"));
+				dto.setViewsCount(rs.getInt("viewsCount"));
+
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return dto;
+	}
+
+	// 게시글 삭제
+	// 예전에는, 탈퇴 여부 상태 변수를 이용해서, 회원정보를 가지고 있었다면,
+	// 이제는 개인정보처리방침리 변경이 되러서, 회원이 요청, 탈퇴시,
+	// 해당 데이터를 어떻게 처리할지는 명확히 명시 해야함.
+	// 나의 정보를 모두 삭제 가능하게 해줘야하고,
+	// 게시글, 로그인 후 -> 작성,
+	// 내가 작성한 글만, 수정, 삭제 할수있음.
+	// 로그인, 회원가입 없어서, 단순 삭제만 구현중.
+
+	public boolean deleteBoarder(int id) {
+
+		boolean ok = false;
+		Connection con = null;
+		PreparedStatement ps = null;
+
+		try {
+			con = getConn();
+			String sql = "delete from BOARDER_JAVA where id=?";
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, id);
+
+			int r = ps.executeUpdate(); // 실행 -> 삭제
+
+			if (r > 0)
+				ok = true; // 삭제됨;
+
+		} catch (Exception e) {
+			System.out.println(e + "-> 오류발생");
+		}
+		return ok;
+	}
+
+	// 게시글 수정.
+	public boolean updateBoarder(Boarder_DTO vMem) {
+		System.out.println("dto=" + vMem.toString());
+		boolean ok = false;
+		Connection con = null;
+		PreparedStatement ps = null;
+		try {
+
+			con = getConn();
+			String sql = "update BOARDER_JAVA set subject=?, content=?" + "where id=?";
+					
+
+			ps = con.prepareStatement(sql);
+
+			ps.setString(1, vMem.getSubject());
+			ps.setString(2, vMem.getContent());
+			ps.setInt(3, vMem.getId());
+			
+
+			int r = ps.executeUpdate(); // 실행 -> 수정
+			// 1~n: 성공 , 0 : 실패
+
+			if (r > 0)
+				ok = true; // 수정이 성공되면 ok값을 true로 변경
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return ok;
+	}
 
 }
