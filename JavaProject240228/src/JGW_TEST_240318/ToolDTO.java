@@ -39,6 +39,22 @@ public class ToolDTO {
 	public void setManager(String manager) {
 		this.manager = manager;
 	}
-	
-
+	@Override
+	public String toString() {
+		return "ToolDTO [toolname=" + toolname + ", toolserial=" + toolserial + ", inventory=" + inventory + ","
+				+ " location=" + location + ", manager=" + manager + "]";
+				
+	}
+	public void setInventory1(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void setId(String id) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void setId1(String id) {
+		// TODO Auto-generated method stub
+		
+	}
 }

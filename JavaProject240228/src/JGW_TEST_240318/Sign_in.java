@@ -23,9 +23,10 @@ public class Sign_in extends JFrame implements ActionListener {
 		setSize(300, 150);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
-
-		JPanel panel = new JPanel();
-		panel.setLayout(new GridLayout(3, 2));
+		
+		JPanel mainPanel = new JPanel(new BorderLayout());
+		JPanel panel = new JPanel(new GridLayout(3, 2));
+		
 
 		panel.add(new JLabel("이메일:"));
 		emailField = new JTextField();
@@ -44,6 +45,7 @@ public class Sign_in extends JFrame implements ActionListener {
         panel.add(signUpButton);
 
 		add(panel);
+		
 	}
 
 	@Override
@@ -85,6 +87,11 @@ public class Sign_in extends JFrame implements ActionListener {
 				// 결과셋에 데이터가 있다면 로그인 성공
 				if (rs.next()) {
 					JOptionPane.showMessageDialog(this, "로그인 성공!");
+					SwingUtilities.invokeLater(() -> {
+				        Tool_list2 toolList = new Tool_list2();
+				        toolList.setVisible(true);
+				        dispose(); // 현재 창 닫기
+				    });
 				} else {
 					JOptionPane.showMessageDialog(this, "로그인 실패: 이메일 또는 비밀번호가 일치하지 않습니다.");
 				}
