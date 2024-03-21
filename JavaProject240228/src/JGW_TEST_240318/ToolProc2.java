@@ -91,7 +91,7 @@ public class ToolProc2 extends JFrame implements ActionListener {
 
 		if (isSuccess) {
 			JOptionPane.showMessageDialog(this, "저장 성공!");
-			dispose(); // 현재 창 닫기
+			dispose();
 		} else {
 			JOptionPane.showMessageDialog(this, "저장 실패: 데이터베이스에 저장할 수 없습니다.");
 		}

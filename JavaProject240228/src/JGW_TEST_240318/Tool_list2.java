@@ -18,6 +18,7 @@ import java.util.List;
 
 public class Tool_list2 extends JFrame implements MouseListener, ActionListener {
 	private JTable jTable;
+	
 
 	// 패널은 창에 추가로 붙이는 공간
 	JPanel pbtn;
@@ -25,6 +26,7 @@ public class Tool_list2 extends JFrame implements MouseListener, ActionListener 
 	JButton btnInsert;
 	JButton btnRefresh; // 새로고침 버튼 추가
 	JButton btnDelete; // 삭제 버튼 추가
+	JButton btnLogout;
 
 	public Tool_list2() {
 		setTitle("공구 재고 현황");
@@ -92,22 +94,22 @@ public class Tool_list2 extends JFrame implements MouseListener, ActionListener 
 			}
 		});
 
-		// 테이블의 행을 더블 클릭할 때 수정 창 열기
+		 // 테이블의 행을 클릭할 때 수정 창 열기
 //		jTable.addMouseListener(new MouseAdapter() {
-//			@Override
-//			public void mouseClicked(MouseEvent e) {
-//				if (e.getClickCount() == 2) { // 더블 클릭했을 때
-//					int selectedRow = jTable.getSelectedRow();
-//					if (selectedRow != -1) { // 선택된 행이 있을 때
-//						String toolname = (String) model.getValueAt(selectedRow, 0);
-//						String toolserial = (String) model.getValueAt(selectedRow, 1);
-//						int inventory = (int) model.getValueAt(selectedRow, 2);
-//						String location = (String) model.getValueAt(selectedRow, 3);
-//						String manager = (String) model.getValueAt(selectedRow, 4);
-//						new ToolProc2(toolname, toolserial, inventory, location, manager).setVisible(true);
-//					}
-//				}
-//			}
+//		    @Override
+//		    public void mouseClicked(MouseEvent e) {
+//		    	int selectedRow = jTable.getSelectedRow();
+//		        if (selectedRow != -1 && e.getClickCount() == 1) { // 선택된 행이 있고, 한 번 클릭했을 때
+//		                DefaultTableModel model = (DefaultTableModel) jTable.getModel();
+//		                String toolname = (String) model.getValueAt(selectedRow, 0);
+//		                String toolserial = (String) model.getValueAt(selectedRow, 1);
+//		                int inventory = (int) model.getValueAt(selectedRow, 2);
+//		                String location = (String) model.getValueAt(selectedRow, 3);
+//		                String manager = (String) model.getValueAt(selectedRow, 4);
+//		                new ToolProc2(toolname, toolserial, inventory, location, manager).setVisible(true);
+//		            }
+//		        }
+//		    
 //		});
 	}
 
@@ -157,21 +159,7 @@ public class Tool_list2 extends JFrame implements MouseListener, ActionListener 
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-//		if (e.getClickCount() == 1) { // 한 번 클릭한 경우
-//			int selectedRow = jTable.getSelectedRow();
-//			if (selectedRow != -1) { // 선택된 행이 있을 때
-//				DefaultTableModel model = (DefaultTableModel) jTable.getModel();
-//				String toolname = (String) model.getValueAt(selectedRow, 0);
-//				String toolserial = (String) model.getValueAt(selectedRow, 1);
-//				int inventory = (int) model.getValueAt(selectedRow, 2);
-//				String location = (String) model.getValueAt(selectedRow, 3);
-//				String manager = (String) model.getValueAt(selectedRow, 4);
-//
-//				// 선택된 행의 정보를 이용하여 ToolProc2 수정 창 띄우기
-//				ToolProc2 editWindow = new ToolProc2(toolname, toolserial, inventory, location, manager);
-//				editWindow.setVisible(true);
-//			}
-//		}
+
 	}
 
 	@Override
