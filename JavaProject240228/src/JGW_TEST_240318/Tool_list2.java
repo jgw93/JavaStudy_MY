@@ -69,7 +69,7 @@ public class Tool_list2 extends JFrame implements MouseListener, ActionListener 
 		btnRefresh.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				refreshTable(); // 새로고침 버튼 클릭 시 테이블 갱신
+				refreshTable();
 			}
 		});
 
@@ -94,7 +94,7 @@ public class Tool_list2 extends JFrame implements MouseListener, ActionListener 
 			}
 		});
 
-		 // 테이블의 행을 클릭할 때 수정 창 열기
+//		//  테이블의 행을 클릭할 때 수정 창 열기
 //		jTable.addMouseListener(new MouseAdapter() {
 //		    @Override
 //		    public void mouseClicked(MouseEvent e) {
@@ -136,14 +136,14 @@ public class Tool_list2 extends JFrame implements MouseListener, ActionListener 
 	private void deleteSelectedRow() {
 		DefaultTableModel model = (DefaultTableModel) jTable.getModel();
 		int selectedRow = jTable.getSelectedRow();
-		if (selectedRow != -1) { // 선택된 행이 있을 때만 삭제 진행
+		if (selectedRow != -1) { 
 			String toolname = (String) model.getValueAt(selectedRow, 0);
 			ToolDAO2 toolDAO = new ToolDAO2();
-			toolDAO.deleteTool(toolname); // 선택된 행의 공구명을 이용하여 데이터베이스에서 해당 데이터 삭제
+			toolDAO.deleteTool(toolname); 
 			JOptionPane.showMessageDialog(this, "삭제 완료");
-			refreshTable(); // 테이블 새로고침
+			refreshTable(); 
 		} else {
-			JOptionPane.showMessageDialog(this, "삭제할 행을 선택하세요.", "알림", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(this, "삭제할 행을 선택하세요.","경고", JOptionPane.WARNING_MESSAGE);
 		}
 	}
 

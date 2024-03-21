@@ -28,11 +28,11 @@ public class ToolProc2 extends JFrame implements ActionListener {
 
 		JPanel mainPanel = new JPanel(new BorderLayout());
 
-		JPanel panel = new JPanel(new GridLayout(0, 1)); // 0행으로 지정하여 세로로 정렬
+		JPanel panel = new JPanel(new GridLayout(0, 1)); 
 
 		panel.add(new JLabel("공구명:"));
 		tfToolname = new JTextField(20);
-		// tfToolname.setEditable(false); // 수정 불가능하도록 설정
+		// tfToolname.setEditable(false); 
 		panel.add(tfToolname);
 
 		panel.add(new JLabel("공구 관리 번호:"));
@@ -56,7 +56,7 @@ public class ToolProc2 extends JFrame implements ActionListener {
 		btnSave = new JButton("Save");
 		btnSave.addActionListener(this);
 
-		JPanel centerPanel = new JPanel(new GridLayout(0, 1)); // 0행으로 지정하여 세로로 정렬
+		JPanel centerPanel = new JPanel(new GridLayout(0, 1)); 
 		centerPanel.add(panel);
 
 		mainPanel.add(centerPanel, BorderLayout.CENTER);
@@ -66,7 +66,7 @@ public class ToolProc2 extends JFrame implements ActionListener {
 		setVisible(true);
 
 //		setTitle("재고 관리");
-//		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // 창을 닫을 때 창만 닫히도록 설정
+//		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); 
 //		setSize(400, 300);
 //		setLocationRelativeTo(null);
 	}
@@ -85,15 +85,14 @@ public class ToolProc2 extends JFrame implements ActionListener {
 		String location = tfLocation.getText();
 		String manager = tfManager.getText();
 
-		// 여기에 ToolDAO2를 이용하여 데이터베이스에 저장하는 코드 작성
 		ToolDAO2 toolDAO = new ToolDAO2();
 		boolean isSuccess = toolDAO.saveTool(toolname, toolserial, inventory, location, manager);
 
 		if (isSuccess) {
-			JOptionPane.showMessageDialog(this, "저장 성공!");
+			JOptionPane.showMessageDialog(this, "저장 성공");
 			dispose();
 		} else {
-			JOptionPane.showMessageDialog(this, "저장 실패: 데이터베이스에 저장할 수 없습니다.");
+			JOptionPane.showMessageDialog(this, "저장 실패");
 		}
 	}
 

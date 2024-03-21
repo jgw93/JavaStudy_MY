@@ -12,9 +12,9 @@ import java.sql.SQLException;
 public class Sign_up extends JFrame {
 	// 데이터베이스 연결 정보
 	static final String DRIVER = "oracle.jdbc.driver.OracleDriver";
-	static final String URL = "jdbc:oracle:thin:@localhost:1521:xe"; // Oracle 데이터베이스 URL
-	static final String USER = "system"; // 데이터베이스 사용자 이름
-	static final String PASS = "oracle"; // 데이터베이스 비밀번호
+	static final String URL = "jdbc:oracle:thin:@localhost:1521:xe"; 
+	static final String USER = "system"; 
+	static final String PASS = "oracle"; 
 
 	private JTextField usernameField, emailField, passwordField;
 
@@ -71,12 +71,12 @@ public class Sign_up extends JFrame {
 			// 데이터베이스 연결
 			conn = DriverManager.getConnection(URL, USER, PASS);
 
-			// 사용자가 입력한 정보 가져오기
+			
 			String username = usernameField.getText();
 			String email = emailField.getText();
 			String password = passwordField.getText();
 
-			// 회원가입을 위한 SQL 쿼리 실행
+			
 			String sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, username);

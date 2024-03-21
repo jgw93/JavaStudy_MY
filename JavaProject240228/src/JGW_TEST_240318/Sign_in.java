@@ -10,7 +10,7 @@ public class Sign_in extends JFrame implements ActionListener {
 	static final String DRIVER = "oracle.jdbc.driver.OracleDriver";
 	static final String URL = "jdbc:oracle:thin:@localhost:1521:xe";
 	static final String USER = "system";
-	static final String PASS = "oracle";;
+	static final String PASS = "oracle";
 
 	private JTextField emailField;
 	private JPasswordField passwordField;
@@ -71,22 +71,22 @@ public class Sign_in extends JFrame implements ActionListener {
 			String email = emailField.getText();
 			String password = new String(passwordField.getPassword());
 
-			// SQL 문 실행을 위한 PreparedStatement 객체 생성
+			
 			String sql = "SELECT * FROM users WHERE email = ? AND password = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, email);
 			pstmt.setString(2, password);
 
-			// SQL 실행 및 결과셋 받기
+			
 			rs = pstmt.executeQuery();
 
-			// 결과셋에 데이터가 있다면 로그인 성공
+			
 			if (rs.next()) {
 				JOptionPane.showMessageDialog(this, "로그인 성공!");
 				SwingUtilities.invokeLater(() -> {
 					Tool_list2 toolList = new Tool_list2();
 					toolList.setVisible(true);
-					dispose(); // 현재 창 닫기
+					dispose(); 
 				});
 			} else {
 				JOptionPane.showMessageDialog(this, "로그인 실패: 이메일 또는 비밀번호가 일치하지 않습니다.");
